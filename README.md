@@ -3,10 +3,10 @@
 ### Link to competition: https://dacon.io/competitions/official/235616/overview/ 
 
 ### Brief overview of the competition
-Given a .wav file containing 4 different words pronounced at once, we need to be able to differentiate which words they are. To do so, we output the probability of each of the words given a .wav file containing 4 different words pronounced at once.  
+Given a .wav file containing 4 different words pronounced at once, we need to be able to differentiate which words they are. To do so, we output the probability of each of the words given a .wav file containing 4 different words pronounced at once. Check out the Jupyter notebook in this repository.  
 
 ### Final rank 
-Top 30% (26th place) 
+Top 30% (26th place on private leaderboard) 
 
 ### Methods
 Due to time limitations (only had a few days to work on the competition before it ended) could not attempt a lot of different techniques, but here is a summary.  
@@ -23,7 +23,7 @@ Due to time limitations (only had a few days to work on the competition before i
 
 6. Tried adding combinations of dropout (AlphaDropout) and batchnorm, but dropouts seemed to hurt performance (more experimentations could have been done but I was short of time). 
 
-7. CNN was trained using paperspace NVIDIA Quadro P6000 GPU.  
+7. CNN was trained using paperspace NVIDIA Quadro P6000 GPU. Kullback–Leibler divergence was used as the loss function. 
 
 8. If there was more time, I could have experimented with different (possibly more complex and deeper) neural network structures, tried different ways of generating spectrograms (or use these different methods of generating spectrograms all at once as input data), and try k-fold cross validation (get predictions for each of the models from k-fold and average their results - this tends to perform better judging from prior experience). Also, instead of using spectrogram data, we could have used the actual numpy data read from the .wav files and use 1D-CNN or DenseNet or ResNet on this data.    
 
